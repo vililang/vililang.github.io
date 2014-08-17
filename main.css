@@ -1,7 +1,16 @@
-.container-box	{ width:720px; border:1px solid #3a3a3a; box-shadow: 6px 6px 3px #888888; margin:auto auto; }
-.upper-box			{ background-color:#2c508a; text-align:center; padding:15px; }
-.lower-box			{ background-color:#eeeeee; text-align:center; padding:15px; }
-.navi-box				{ height:30px; background-color:#3a3a3a; text-align:center; padding:5px; }
+#container-box	{ width:720px; border:1px solid #3a3a3a; box-shadow: 6px 6px 3px #888888; margin:auto auto; }
+#upper-box			{ background-color:#2c508a; text-align:center; padding:15px; display:block;}
+#lower-box			{ background-color:#eeeeee; text-align:center; padding:15px; display:block;}
+#navi 					{ height:30px; padding:0px;
+									margin:0px;
+									font:18px helvetica neue;
+									background-color:#3a3a3a; 
+									text-align:center; }
+#navi ul			{ height:auto; margin: 0px; padding:5px 0px 0px 0px;}
+#navi li			{	display: inline; margin: 0px; padding: 20px;}
+#navi a				{	color:#ffffff; text-decoration: none; padding: 5px 15px 5px 15px; }
+#navi a:hover	{	color:#3a3a3a; background-color:#eeeeee; }
+
 body	{ background: linear-gradient(#cccccc 70%, #3a3a3a); background-attachment: fixed; }
 h1		{ font: 40px helvetica neue; font-weight:bold; color:#ffffff; }
-p			{ font: 14px helvetica neue; }
+p			{ font: 14px helvetica neue; margin:20px; }
