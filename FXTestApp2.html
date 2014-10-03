@@ -1,0 +1,43 @@
+<html><head>
+  <SCRIPT src="http://java.com/js/dtjava.js"></SCRIPT>
+<script>
+    function launchApplication(jnlpfile) {
+        dtjava.launch(            {
+                url : 'FXTestApp2.jnlp'
+            },
+            {
+                javafx : '2.2+'
+            },
+            {}
+        );
+        return false;
+    }
+</script>
+
+<script>
+    function javafxEmbed_fxApplication() {
+        dtjava.embed(
+            {
+                id : 'fxApplication',
+                url : 'FXTestApp2.jnlp',
+                placeholder : 'consultationWorm',
+                width : 800,
+                height : 800
+            },
+            {
+                javafx : '2.2+'
+            },
+            {}
+        );
+    }
+    <!-- Embed FX application into web page once page is loaded -->
+    dtjava.addOnloadCallback(javafxEmbed_fxApplication);
+</script>
+
+</head><body>
+<h2>Test page for <b>ConsultationWorm</b></h2>
+  <b>Webstart:</b> <a href='FXTestApp2.jnlp' onclick="return launchApplication('FXTestApp2.jnlp');">click to launch this app as webstart</a><br><hr><br>
+
+  <!-- Applet will be inserted here -->
+  <div id='consultationWorm'></div>
+</body></html>
