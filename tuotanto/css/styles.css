@@ -103,8 +103,7 @@ h1 {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: auto;
-	/*background-image: url("../pics/pohja.jpg");*/
-	background-color: #155915;
+	background-image: url("../pics/taustakuva.png");
 	background-repeat: no-repeat;
 	margin-bottom: auto;
 	width: 550px;
@@ -153,10 +152,6 @@ table {
 #windowpopup {
 	width:	70%;
 	margin-left: 15%;
-	top: 11%;
-	/*margin-top:-600px;*/
-	/*top:-550px;*/
-
 	position: absolute;
 	background-color: #000000;
 	border: solid 4px #ffffff;
@@ -165,8 +160,35 @@ table {
 	box-shadow: 6px 6px 6px;
 	min-width: 400px;
 }
-.luukkukuva {
+#windowimage {
 	width: 100%;
+}
+.arrowleft {
+	background-color: #3f3f3f;
+	opacity: 0.3;
+	margin-top: -44px;
+	margin-left: 2px;
+	width: 36px;
+	height:36px;
+	float: left;
+	padding-top:3px;
+	padding-left:4px;
+	border-radius:2px;
+}
+.arrowright {
+	background-color: #3f3f3f;
+	opacity: 0.3;
+	margin-top: -44px;
+	margin-right: 2px;
+	width: 36px;
+	height:36px;
+	float: right;
+	padding-top:3px;
+	padding-left:4px;
+	border-radius:2px;
+}
+.arrowhighlight {
+	opacity: 0.7;
 }
 .flavourwrap {
 	width:100%;
@@ -190,14 +212,12 @@ table {
 .flavourmiddle p {
 	font-size: 14px;
 	color: #fff;
-	/*margin: 12px 20px 12px 20px;*/
 	font-family: Arial, Tahoma, serif;
 }
 .flavourright {
 	display: table-cell;
 	width:54px;
-	text-a
-	lign: center;
+	text-align: center;
 	vertical-align: middle;
 }
 #windowpopup .social {
