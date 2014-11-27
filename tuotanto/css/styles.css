@@ -76,7 +76,7 @@ footer p {
 /***** main page contents *****/
 
 .pagetitle {
-	margin-top: 70px;
+	margin-top: 62px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom:32px;
@@ -89,6 +89,7 @@ footer p {
 	font-family: cursive;
 	text-shadow: 1px 1px #155915;
 	margin-top:0px;
+	margin-bottom: -8px;
 	padding-bottom:0px;
 }
 h1 {
@@ -164,31 +165,27 @@ table {
 	width: 100%;
 }
 .arrowleft {
-	background-color: #3f3f3f;
-	opacity: 0.3;
-	margin-top: -44px;
-	margin-left: 2px;
-	width: 36px;
-	height:36px;
+	background-color: #2f2f2f;
+	margin-left: -54px;
+	width: 46px;
+	height:46px;
 	float: left;
 	padding-top:3px;
 	padding-left:4px;
 	border-radius:2px;
 }
 .arrowright {
-	background-color: #3f3f3f;
-	opacity: 0.3;
-	margin-top: -44px;
-	margin-right: 2px;
-	width: 36px;
-	height:36px;
+	background-color: #2f2f2f;
+	margin-right:-54px;
+	width: 46px;
+	height:46px;
 	float: right;
 	padding-top:3px;
 	padding-left:4px;
 	border-radius:2px;
 }
 .arrowhighlight {
-	opacity: 0.7;
+	background-color: #888888;
 }
 .flavourwrap {
 	width:100%;
