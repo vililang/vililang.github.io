@@ -35,8 +35,12 @@ var main = function (){
 		}
 	});	
 
-	$(".socialshare").click(function (){
+	/* social sharebuttons */
+ 	$(".socialwrapper a:first-child").click(function (){
 		openShareWindow("http://twitter.com/share?text=Lapsuuden%20joulukalenteri!%20&hashtags=joulu,vanha,ankea&url=http%3A%2F%2Fkalenteri.net");
+	}); 
+	$(".socialwrapper a:nth-child(2)").click(function (){
+		openShareWindow("http://www.facebook.com/share.php?u=http://vililang.github.io/tuotanto/index.html");
 	}); 
 
 	/* Dismissing the window popup by clicking the dark overlay */
@@ -90,7 +94,7 @@ var openWindow = function(day) {
 		html += "<div class='flavourwrap'>";
 			html += "<div class='flavourleft'>" + day + ".</div>";
 			html += "<div class='flavourmiddle'><p>" + popupTxt + "</p></div>";
-			html += "<div class='flavourright'><a class='socialshare' href=''><img src='pics/twitter24x24.png'/></a><img src='pics/facebook24x24.png'/></div>";
+			html += "<div class='flavourright'><a href=''><img src='pics/twitter24x24.png'/></a><a href=''><img src='pics/facebook24x24.png'/></a></div>";
 		html += "</div>";
 			
 	$("#windowpopup").html(html);
@@ -117,9 +121,14 @@ var openWindow = function(day) {
 		}
 	});
 
+	/* social sharebuttons for calendar window popup */
 	$('.flavourright a:first-child').click(function() {
 		var tweetUrl = 'http://twitter.com/share?text=Lapsuuden%20joulukalenterin ' + day + '. luukku auki!%20&hashtags=joulu,vanha,ankea&url=http%3A%2F%2Fkalenteri.net';
 		openShareWindow(tweetUrl);
+	});
+	$('.flavourright a:nth-child(2)').click(function() {
+		var fbUrl = 'http://www.facebook.com/share.php?u=http://vililang.github.io/tuotanto/index.html';
+		openShareWindow(fbUrl);
 	});
 
 	// add event handlers for prev arrow if it is present
@@ -148,12 +157,14 @@ var openWindow = function(day) {
 	}
 };
 
+/* Set the cookie containing info about opened windows */
 var setCookie = function() {
 	var expires = "expires=Sat, 31 Jan 2015 00:00:00 UTC"; 
 	var cookieStr = "opened=" + windowsOpenedEarlier + "; " + expires;
 	document.cookie=cookieStr;
 };
 
+/* Read opened window info from cookie. */
 var readCookie = function() {
 	var param = "opened=";
 	var arr = document.cookie.split(';');
@@ -165,6 +176,7 @@ var readCookie = function() {
 		return "nnnnnnnnnnnnnnnnnnnnnnnn";
 };
 
+/* Open window popup for social share actions */
 var openShareWindow = function(url) {
     var width  = 575,
         height = 400,
@@ -176,8 +188,7 @@ var openShareWindow = function(url) {
                  ',top='    + top    +
                  ',left='   + left;
     
-    window.open(url, 'twitter', opts);
- 
+    window.open(url, 'Social share', opts);
     return false;
 };
 
