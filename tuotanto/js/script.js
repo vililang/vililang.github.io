@@ -35,6 +35,10 @@ var main = function (){
 		}
 	});	
 
+	$(".socialshare").click(function (){
+		openShareWindow("http://twitter.com/share?text=Lapsuuden%20joulukalenteri!%20&hashtags=joulu,vanha,ankea&url=http%3A%2F%2Fkalenteri.net");
+	}); 
+
 	/* Dismissing the window popup by clicking the dark overlay */
 	$(".overlay").click(function (){
 		$("#windowpopup").hide();
@@ -86,7 +90,7 @@ var openWindow = function(day) {
 		html += "<div class='flavourwrap'>";
 			html += "<div class='flavourleft'>" + day + ".</div>";
 			html += "<div class='flavourmiddle'><p>" + popupTxt + "</p></div>";
-			html += "<div class='flavourright'><img src='pics/twitter24x24.png'/><img src='pics/facebook24x24.png'/></div>";
+			html += "<div class='flavourright'><a class='socialshare' href=''><img src='pics/twitter24x24.png'/></a><img src='pics/facebook24x24.png'/></div>";
 		html += "</div>";
 			
 	$("#windowpopup").html(html);
@@ -111,6 +115,11 @@ var openWindow = function(day) {
 			$(this).css("background-color","rgba(25,25,25, 0.5)");
 			$(this).css("border","1px solid #191919");
 		}
+	});
+
+	$('.flavourright a:first-child').click(function() {
+		var tweetUrl = 'http://twitter.com/share?text=Lapsuuden%20joulukalenterin ' + day + '. luukku auki!%20&hashtags=joulu,vanha,ankea&url=http%3A%2F%2Fkalenteri.net';
+		openShareWindow(tweetUrl);
 	});
 
 	// add event handlers for prev arrow if it is present
@@ -154,6 +163,22 @@ var readCookie = function() {
 			if (c.indexOf(param) != -1) return c.substring(param.length, c.length);
 		}
 		return "nnnnnnnnnnnnnnnnnnnnnnnn";
+};
+
+var openShareWindow = function(url) {
+    var width  = 575,
+        height = 400,
+        left   = ($(window).width()  - width)  / 2,
+        top    = ($(window).height() - height) / 2,
+        opts   = 'status=1' +
+                 ',width='  + width  +
+                 ',height=' + height +
+                 ',top='    + top    +
+                 ',left='   + left;
+    
+    window.open(url, 'twitter', opts);
+ 
+    return false;
 };
 
 /* Dirty popup position correction on window resize <<*/
