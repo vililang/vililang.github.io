@@ -10,6 +10,12 @@ var windowsOpenedEarlier = "nnnnnnnnnnnnnnnnnnnnnnnn";
 var main = function (){
 	windowsOpenedEarlier = readCookie();
 
+	/*$.getScript("js/rot.js", function(){
+
+   		alert(rot("no"),-1);
+
+	});*/
+
 	/* Read calendar window pics and images */
 	$.getJSON("js/windows.json", function(data) {
 			jsonData = data;
@@ -94,7 +100,7 @@ var openWindow = function(day) {
 		html += "<div class='flavourwrap'>";
 			html += "<div class='flavourleft'>" + day + ".</div>";
 			html += "<div class='flavourmiddle'><p>" + popupTxt + "</p></div>";
-			html += "<div class='flavourright'><a href=''><img src='pics/twitter24x24.png'/></a><a href=''><img src='pics/facebook24x24.png'/></a></div>";
+			html += "<div class='flavourright'><a href='#'><img src='pics/twitter24x24.png'/></a><a href='#'><img src='pics/facebook24x24.png'/></a></div>";
 		html += "</div>";
 			
 	$("#windowpopup").html(html);
